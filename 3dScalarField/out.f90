@@ -18,7 +18,6 @@ program hoge
       m3(i,j)=a1(i)**2+a2(j)**2
     enddo
   enddo
-  m3=m3/20.d0
 
   do i=-n,n
     do j=-n,n
