@@ -1,6 +1,6 @@
 #!/usr/bin/env gnuplot
 
-#if(!exist('i')) i=0
+# for Greek alphabets etc.
 set termoption enhanced
 
 set xrange [-10:10];set yrange [-10:10]
@@ -13,7 +13,7 @@ set title "f(x,y)=x^2+y^2"
 set xlabel "x"
 set ylabel "y"
 
-splot "data.table" using 1:2:3 with points palette \
+splot "data.table" with points palette \
 pointtype 7 pointsize 1 notitle
 
 pause -1 "Hit return key."
