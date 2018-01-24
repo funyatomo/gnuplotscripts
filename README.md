@@ -8,7 +8,7 @@ gnuplotを用いた画像のプロット用のスクリプトのテンプレー�
 
 - set pm3d **depthorder**
 - set ticslevel 0
-- splot "file" using 1:2:3**:4** w pm3d
+- splot "file" using 1:2:3 **:4** w pm3d
 
 ## 2dplotdotpalette
 
