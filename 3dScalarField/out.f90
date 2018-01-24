@@ -6,6 +6,8 @@ program hoge
   real(8)::a1(-n:n)=0.d0,a2(-n:n)=0.d0,m3(-n:n,-n:n)=0.d0
   real(8)::zero=0.d0
 
+  open(10,file='data.table',status='replace')
+
   do i=-n,n
     a1(i)=dble(i)/5.d0
     a2(i)=dble(i)/5.d0
@@ -20,25 +22,27 @@ program hoge
 
   do i=-n,n
     do j=-n,n
-      print*,a1(i),a2(j),zero,m3(i,j)!x,y,z,0.d0
+      write(10,*) a1(i),a2(j),zero,m3(i,j)!x,y,z,0.d0
     enddo
-    print*
+    write(10,*)
   enddo
-  print*
+  write(10,*)
 
   do i=-n,n
     do j=-n,n
-      print*,a1(i),zero,a2(j),m3(i,j)!x,y,z,0.d0
+      write(10,*) a1(i),zero,a2(j),m3(i,j)!x,y,z,0.d0
     enddo
-    print*
+    write(10,*)
   enddo
-  print*
+  write(10,*)
 
   do i=-n,n
     do j=-n,n
-      print*,zero,a1(i),a2(j),m3(i,j)!x,y,z,0.d0
+      write(10,*) zero,a1(i),a2(j),m3(i,j)!x,y,z,0.d0
     enddo
-    print*
+    write(10,*)
   enddo
+
+  close(10)
 
 end
